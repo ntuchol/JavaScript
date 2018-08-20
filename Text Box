@@ -1,0 +1,7 @@
+var box = document.createElement("input");
+box.type = "text";
+document.getElementById("some_Element_ID").appendChild(box);
+box.value = boxValue; box.id = boxID;
+var boxObject = document.getElementById(boxID); 
+boxObject.style.backgroundColor = "red";
+
