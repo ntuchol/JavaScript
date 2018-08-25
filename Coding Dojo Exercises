@@ -1,0 +1,42 @@
+
+//Can I Drive Yet  
+var can_i_drive = true;
+function can_i_drive_yet(driver_age) {
+  if(driver_age >= 16) {
+    can_i_drive = true;
+  } else {
+    can_i_drive = false;
+  }
+  return can_i_drive;
+}
+console.log(can_i_drive_yet(14));
+console.log(can_i_drive_yet(22));
+
+//Liftoff 
+function liftoff_countdown(start_num) {
+    if (start_num === 0) {
+        console.log("Liftoff!");
+    } else {
+        console.log(start_num);
+        liftoff_countdown(start_num - 1);
+    }
+}
+
+liftoff_countdown(6);
+
+//Clock Angles 
+function clock_Angles (hour, minute) {
+  var hourDegrees = (hour/12) * 360;
+  var minuteDegrees = (minute/60) * 360;
+  var degreeAngles = Math.abs(hourDegrees - minuteDegrees);
+  
+  console.log(degreeAngles);
+  
+  if(degreeAngles>180) {
+    return Math.round (360 - degreeAngles);
+  } else {
+    return Math.round(degreeAngles);
+    }
+  
+}
+clockAngles(3,0);
