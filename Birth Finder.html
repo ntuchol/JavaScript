@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Birth Finder Project</title>
+	</head>
+
+<body>
+	<center>
+		<form style="margin-top: 100px;">
+			<input style="width: 400px; height: 30px; padding-left: 10px;" placeholder="Type Your Age Here!" type="number" name="number" id="number"/>
+			<input style="height: 35px;" type="button" name="button" value="Birth Finder" id="button"/>
+			<center><p id="test">Year</p></center>
+		</form>
+	</center>
+	
+	
+		<script>
+			function calculate(){
+			
+				var number = document.getElementById("number").value;
+				
+					if(number== "" || number== 0){
+						window.alert("Please type your age!");
+						return;
+					}
+					
+				var date = new Date().getFullYear();
+				
+				var birthyear = number - date;
+				
+				document.getElementById("test").style.display = "block";
+				document.getElementById("test").innerHTML = "Your Birth Years is - " + birthyear;
+			
+			}
+		
+				
+
+				document.getElementById("test").style.display = "none";
+				
+				document.getElementById("button").onclick = function () { calculate(); }
+		</script>
+</body>
+</html>
