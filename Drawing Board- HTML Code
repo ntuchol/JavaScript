@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <link rel="stylesheet" type= "text/css" href="style.css"></link>
+  </head>
+<body>
+  <h2> Drawing board- Javascript Learning Project </h2>
+<canvas id="canDraw" width="500" height="200">
+  <div>
+    <button id ="btnErase" onclick="eraseBoard()">Erase</button>
+  </div>
+  </canvas>
+   <div>
+    <button id ="btnErase" onclick="eraseBoard()">Erase</button>
+  </div>
+  <script src="draw.js"></script>
+</body>
+</html>
