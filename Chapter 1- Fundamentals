@@ -1,0 +1,118 @@
+// Chapter 1- Fundamentals
+
+//Setting and Swapping
+var myNumber = 42;
+myName = "Natalia";
+var temp = myName;
+var temp2 = myNumber;
+myName = temp2; 
+myNumber = temp; 
+console.log(myName);
+console.log(myNumber);
+
+//Print -52 to 1066 
+for(num = -52; num <= 1066; num++) {
+  console.log(num);
+}
+
+//Don't Worry, Be Happy
+function beCheerful() {
+  console.log("Good Morning!")
+}
+
+for(num = 1; num < 99; num++) {
+  beCheerful()
+}
+
+//Multiples of Three-but Not All 
+total_sum = 0
+for(num = -300; num <= 0; num++) {
+    if (num % 3 == 0 && num != -6 && num != -3) {
+        console.log(num)
+    }
+}
+//Printing Integers with While 
+var num = 2000;
+while(num < 5281) {
+  console.log(num);
+  num++;
+}
+
+
+//You Say It's Your Birthday
+var birthDay = Math.floor(  (Math.random() * 31) + 1);
+
+var birthMonth = Math.floor((Math.random() *12) + 1);
+
+if (birthDay == 2 || birthMonth == 7) {
+    console.log("How did you know?");
+} else {
+    console.log("Just another day");
+}
+
+
+//Print and Count 
+count = 0;
+for (var i = 512; i < 4097; i++){
+  if (i % 5 == 0) {
+    console.log(i);
+    count++;
+  }
+}
+
+//Multiples of Six 
+var i = 0
+while (i < 600001) {
+    i++;
+if (i % 6 == 0) {
+    console.log(i)
+  }
+}
+
+//Counting the Dojo Way 
+for (var i = 1; i < 101; i++) {
+    if (i % 5 == 0 && i % 10 != 0) {
+       console.log("Coding")
+       continue;
+}
+if (i % 10 == 0) {
+    console.log("Dojo")
+   continue;
+}
+  console.log(i);
+}
+
+
+//What Do You Know 
+function whatDoYouKnow(incoming){
+  console.log(incoming)
+}
+
+whatDoYouKnow("Hello my name is Natalia Tucholska")
+
+//Whoa, That Sucker's Huge..
+function hugeNum(){
+    let sum = 0;
+    for(var i = -300000; i <= 300000; i++){
+        if(i % 2 != 0){
+            sum += i;
+        }
+    }
+    console.log(sum);
+}
+
+hugeNum();
+
+//Countdown By Fours
+function countDown(){
+    let num = 2016;
+    
+    while(num != 0){
+        console.log(num);
+        num -= 4;
+    }
+}
+
+countDown();
+
+
