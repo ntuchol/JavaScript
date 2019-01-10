@@ -1,0 +1,150 @@
+//HTML
+<div id="content"><input type="range" id="cost" min="170000" max="2500000" value="170000" step="10000" oninput="update(this.value, fee.value, 'cost')">
+<h2>£<span id="costval">170,000</span><br></h2>
+<input type="range" id="fee"min="1" max="4" value="1" step="0.25" oninput="calculateSavings(this.value,'cost')">
+<h2><span id="slideval">0</span>%</h2>
+  <h2>Average saving of £<span id="saved">1,055</span></h2></div>
+  
+//CSS
+/** TO DO // REFERENCE: http://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html // COOL BUT CHEATING: http://danielstern.ca/range.css/#/ **/
+body {
+  background-color: #729DB2;
+  font-family: Raleway;
+  color: #fff;
+}
+#content {
+  width: 50vw;
+  height: 50vw;
+  margin: 10% auto;
+  text-align: left;
+}
+input[type=range]{
+    -webkit-appearance: none;
+    background: transparent;
+    width: 100%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 5px;
+  width: 90%;
+  background: rgba(78,78,76,0.2);
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 22px;
+  width: 22px;
+  background-color: rgba(78,78,76,1);
+  border: 3px solid #9cd3d2;
+  margin-top: -9px;
+  border-radius: 50%;
+  transition: .1s ease-in-out;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: rgba(78,78,76,0.2);
+}
+
+/**MOZ**/
+
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 22px;
+  width: 22px;
+  background-color: rgba(78,78,76,1);
+  border: 3px solid #9cd3d2;
+  margin-top: -9px;
+  border-radius: 50%;
+  transition: .1s ease-in-out;
+}
+input[type=range]::-moz-range-track {
+  height: 5px;
+  width: 100%;
+  background: rgba(78,78,76,0.2);
+  cursor: pointer;
+}
+input[type=range]::-moz-focus-outer {
+    border: 0;
+}
+ /**IE**/
+
+input[type=range]::-ms-thumb {
+  background-color: rgba(78,78,76,1);
+  border: 2px solid #9cd3d2;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  transition: .1s ease-in-out;
+  margin-top: 1px;
+}
+input[type=range]::-ms-track {
+  height: 5px;
+  width: 100%;
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+  background: #9cd3d2;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #9cd3d2;
+}
+input[type=range]::-ms-fill-upper {
+  background: rgba(78,78,76,0.2);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: rgba(78,78,76,0.2);
+}
+
+
+//Javascript
+function calculateSavings(slider,cost){
+    var saved = document.getElementById('saved');
+    var slideval = document.getElementById('slideval');
+    var cost = document.getElementById(cost).value;
+    var calc = ((cost / 100)*slider) - 645;
+    var savedvalue = (calc);
+    if (savedvalue < 0)
+    {
+      saved.innerHTML = 0;
+    }
+    else {
+      saved.innerHTML = (calc).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    slideval.innerHTML = slider;
+}
+
+function update(costval, slider, cost){
+  var display = document.getElementById("costval");
+  display.innerHTML =  costval.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  calculateSavings(slider,cost);
+}function calculateSavings(slider,cost){
+    var saved = document.getElementById('saved');
+    var slideval = document.getElementById('slideval');
+    var cost = document.getElementById(cost).value;
+    var calc = ((cost / 100)*slider) - 645;
+    var savedvalue = (calc);
+    if (savedvalue < 0)
+    {
+      saved.innerHTML = 0;
+    }
+    else {
+      saved.innerHTML = (calc).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    slideval.innerHTML = slider;
+}
+
+function update(costval, slider, cost){
+  var display = document.getElementById("costval");
+  display.innerHTML =  costval.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  calculateSavings(slider,cost);
+}
