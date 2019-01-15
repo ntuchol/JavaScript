@@ -1,0 +1,57 @@
+// Print Low, Return High
+function printLowReturnHigh(myArr) {
+    let low = myArr.reduce((a,b) => a < b ? a : b);
+    let high = myArr.reduce((a,b) => a > b ? a : b);
+    console.log(`print ${low} and return ${high}`)
+}
+printLowReturnHigh([26, 14, 6, 8, 3, 206]);
+
+// Evens and Odds
+function evensOdds(myArr) {
+    let eCount = 0;
+    let oCount = 0;
+    for (let i = 0; i < myArr.length; i++) {
+        if (myArr[i] % 2 == 0) {
+            eCount++;
+            oCount = 0;
+            if (eCount >= 3) {
+                console.log("Even more so!");
+            }
+        } else {
+            oCount++;
+            eCount = 0
+            if (oCount >= 3) {
+                console.log("That’s odd!");
+            }
+        }
+    }
+}
+evensOdds([1, 2, 3, 57, 93, 2, 1, 2, 24, 36, 48, 25, 23, 21, 19, ]);
+
+// Reverse Array
+function reverseArray(myArr) {
+    for (let i = 0; i < myArr.length / 2; i++) {
+        let temp = myArr[i];
+        myArr[i] = myArr[myArr.length - 1 - i];
+        myArr[myArr.length - 1 - i] = temp;
+    }
+    console.log(myArr);
+}
+reverseArray([3, 1, 6, 4, 2]);
+
+//  Always Hungry
+function alwaysHungry(myArr) {
+    let foodCount = 0;
+    for (let i = 0; i < myArr.length; i++) {
+        if (myArr[i] == "food") {
+            console.log("yummy");
+            foodCount++;
+        }
+    }
+    if (foodCount == 0) {
+        console.log("I'm hungry");
+    }
+}
+alwaysHungry(["food", "not", "food", "not"]);
+alwaysHungry(["fodfsafod", "not", "fodsfdsod", "not"]);
+
