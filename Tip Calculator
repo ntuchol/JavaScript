@@ -1,0 +1,12 @@
+var amount = prompt("Enter amount of bill");
+var bill = amount;
+var precentage = prompt("Enter the tip precentage in decimal format");
+var precent = precentage;
+var tip = function() {
+  var total = function() {
+  var tipCalc = bill * precentage;
+    console.log("Your tip is $" + tipCalc);
+  }
+total();
+}
+tip();
