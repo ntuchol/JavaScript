@@ -1,4 +1,4 @@
-//Chapter 1
+//Chapter 2
 function loopy(num) {
   let pound = "#";
   for (i = 0; i < num; i++) {
@@ -8,7 +8,6 @@ function loopy(num) {
 }
 console.log(loopy(7));
 
-//Chapter 2
 function fizzBuzz() {
   for (i = 1; i <= 100; i++) {
     if ((i % 3 === 0) && (i % 5 === 0)) {
@@ -24,7 +23,6 @@ function fizzBuzz() {
 }
 fizzBuzz(10)
 
-//Chapter 3
 function checkMate() {
   var grid = "# # # #";
   for (i = 0; i < 8; i++) {
