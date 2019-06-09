@@ -1,0 +1,46 @@
+//Drawing a triangle 
+var hash_tag = '';
+
+if(console){
+for (var i = 0; i < 10; i++) {
+    hash_tag = hash_tag + '#';
+    console.log(hash_tag);
+}
+}
+
+//Drawing a chess board
+var size= 8;
+var chess_board = "";
+    for (var line_counter = 1; line_counter < size; line_counter++) { 
+       //When line_counter is an even number, the spacing of the hastags will start shifted to the right 
+        if (line_counter % 2 === 0) { //if lineCounter is an even number
+        for (var char_counter = 1; char_counter < size; char_counter++) {
+            //Keeps track of if the line number is even or odd, this will determine the starting point of the hashtags. 
+            var even_odd = (char_counter % 2 === 0);
+            switch(even_odd) {
+                case true:
+                    (chess_board += "#");
+                    break;
+                case false:
+                    (chess_board += " ");
+                    break;
+                }
+            }                   
+        }
+    else { 
+      //The spacing of the hashes when the line_counter is odd
+        for (var char_counter = 1; char_counter < size; char_counter++) {
+            var even_odd = (char_counter % 2 === 0);
+            switch (even_odd) {
+                case true:
+                    (chess_board += " ");
+                    break;
+                case false:
+                    (chess_board += "#");
+                    break;
+            }
+            }                       
+        }   
+      chess_board += "\n";
+    }
+    console.log(chess_board);
