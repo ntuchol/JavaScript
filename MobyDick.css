@@ -1,0 +1,38 @@
+/* General styling */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu styling */
+.book-navigation ul {
+  list-style-type: none; /* Removes bullets */
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  overflow: hidden; /* Clear floats */
+}
+
+.book-navigation li {
+  float: left; /* Arranges menu items horizontally */
+}
+
+.book-navigation a {
+  display: block; /* Makes links fill the entire list item */
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; /* Removes underlines */
+}
+
+.book-navigation a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth; /* Smoothly scrolls to sections */
+  scroll-padding: 1rem; /* Adjusts for header if needed */
+}
